@@ -8,11 +8,14 @@ const Input = () => {
     setText(event.target.value)
   }
 
+  const onReset = () => {
+    setText('')
+  }
   // prettirt-ignore
   return (
     <div>
       <input onChange={onChange} value={text} />
-      <button>초기화</button>
+      <button onClick={onReset}>초기화</button>
       <div>
         <b>값 : {text}</b>
       </div>
