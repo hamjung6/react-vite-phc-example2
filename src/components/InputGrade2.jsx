@@ -14,7 +14,7 @@ const InputGrade2 = () => {
     // const value = event.target.value;
 
     setGrade({
-      ...grade,
+      grade,
       [name]: value,
     })
   }
@@ -31,7 +31,7 @@ const InputGrade2 = () => {
           총점 : {Number(grade.kor) + Number(grade.eng) + Number(grade.math)}
         </div>
         <div>
-          평균 :{' '}
+          평균 :
           {(Number(grade.kor) + Number(grade.eng) + Number(grade.math)) / 3.0}
         </div>
       </div>
