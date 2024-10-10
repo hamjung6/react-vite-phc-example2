@@ -9,8 +9,10 @@ import InputPage from '../pages/InputPage'
 import GradePage from '../pages/GradePage'
 import UseRefPage from '../pages/UseRefPage'
 import UseRefPage2 from '../pages/UseRefPage2'
-import UserArrayPage from './../pages/UserArrayPage'
+// import UserArrayPage from './../pages/UserArrayPage'
 import UserCrudPage from '../pages/UserCrudPage'
+import AxiosPage from '../pages/AxiosPage'
+import AxiosClientPage from './../pages/AxiosClientPage'
 
 // React Routes, Route 사용 시 배열로 관리하기
 const routes = [
@@ -69,6 +71,16 @@ const routes = [
     // element: <UserArrayPage />,
     element: <UserCrudPage />,
     title: '유저페이지',
+  },
+  {
+    path: '/axiosget',
+    element: <AxiosPage />,
+    title: '엑시오스(axios) 연습',
+  },
+  {
+    path: '/axiosclient',
+    element: <AxiosClientPage />,
+    title: 'Axios클라이언트',
   },
 ]
 
