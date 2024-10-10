@@ -1,23 +1,28 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const AxiosClient = () => {
   const [data, setData] = useState([])
+
+  // 처음 랜더링 될 때 한 번만 실행시키고 싶다.
+  useEffect(() => {
+    getClick()
+  }, [])
 
   const getClick = () => {
     axios
       .get('https://sample.bmaster.kro.kr/contacts?pageno=3&pagesize=10')
       .then((response) => {
-        //통신이 성공 했을때
+        // 통신이 성공 했을 때
         console.log(response)
         setData(response.data.contacts)
       })
       .catch(function (error) {
-        //에러가 났을때 실행
+        // 에러가 났을 때 실행
         console.log(error)
       })
       .then(() => {
-        // try catch finally 에서 finally 부분에 해당
+        // try catch finally에서 finally 부분에 해당
         console.log('에러가 나든 안나든 무조건 실행')
       })
   }
